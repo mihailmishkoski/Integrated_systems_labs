@@ -18,8 +18,12 @@ namespace Lab1.Controllers
 
         public IActionResult Index()
         {
-            var concerts = _context.Concert.ToList();
-            return View(concerts);
+            if(User.Identity.IsAuthenticated)
+            {
+                var concerts = _context.Concert.ToList();
+                return View(concerts);
+            }
+            else return View(null); 
         }
 
         public IActionResult Privacy()

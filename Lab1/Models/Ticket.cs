@@ -9,5 +9,7 @@ namespace Lab1.Models
 
         public double NumberOfPeople {  get; set; }
 
+
+
     }
 }

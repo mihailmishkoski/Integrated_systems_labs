@@ -7,23 +7,8 @@
 
 
 
-<div class="container">
-    <div class="row">
-        @foreach (var concert in Model)
-        {
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">@concert.ConcertName</h5>
-                        <p class="card-text">Date: @concert.ConcertDate.ToShortDateString()</p>
-                        <p class="card-text">Place: @concert.ConcertPlace</p>
-                        <p class="card-text">Price: $@concert.ConcertPrice</p>
-                        <a href="@Url.Action("Details", "Concerts", new { id = concert.Id })" class="btn btn-primary">Details</a>
-                        <a href="@Url.Action("Edit", "Concerts", new { id = concert.Id })" class="btn btn-secondary">Edit</a>
-                        <a href="@Url.Action("Delete", "Concerts", new { id = concert.Id })" class="btn btn-danger">Delete</a>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
